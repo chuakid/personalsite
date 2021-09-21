@@ -1,0 +1,22 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.3.4",
+    "cssnano": "^5.0.8",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "save-dev": "0.0.1-security",
+    "tailwindcss": "^2.2.15",
+    "@11ty/eleventy": "^0.12.1"
+  },
+  "scripts": {
+    "dev": "rm -rf _site && mkdir _site && postcss style.css > _site/style.css && eleventy --serve --quiet",
+    "build": "rm -rf _site && eleventy && NODE_ENV=production postcss style.css > _site/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
