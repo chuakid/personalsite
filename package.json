@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "autoprefixer": "^10.3.4",
     "cssnano": "^5.0.8",
     "postcss": "^8.3.6",
@@ -14,7 +16,7 @@
     "@11ty/eleventy": "^0.12.1"
   },
   "scripts": {
-    "tailwind:process" : "postcss src/style.css --o src/_includes/assets/css/style.css",
+    "tailwind:process": "postcss src/style.css --o src/_includes/assets/css/style.css",
     "dev": "npm run tailwind:process & eleventy --serve --quiet",
     "build": "rm -rf _site && npm run tailwind:process && eleventy"
   },
