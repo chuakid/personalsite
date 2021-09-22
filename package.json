@@ -14,8 +14,9 @@
     "@11ty/eleventy": "^0.12.1"
   },
   "scripts": {
-    "dev": "rm -rf _site && mkdir _site && postcss style.css > _site/style.css && eleventy --serve --quiet",
-    "build": "rm -rf _site && eleventy && NODE_ENV=production postcss style.css > _site/style.css"
+    "tailwind:process" : "postcss src/style.css --o src/_includes/assets/css/style.css",
+    "dev": "npm run tailwind:process & eleventy --serve --quiet",
+    "build": "rm -rf _site && npm run tailwind:process && eleventy"
   },
   "author": "",
   "license": "ISC"
