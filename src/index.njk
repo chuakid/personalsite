@@ -1,13 +1,14 @@
 ---
 layout: main.njk
 title: Kelvin Chua
-information:
-    - title: about
-      text: I am currently studying Computer Science at the National University of Singapore.
-    - title: education
-      text: Diploma in Multimedia and Infocomm Technology, Nanyang Polytechnic
-    - title: skills
-      text: HTML5, CSS, JS, TypeScript, Vue, Eleventy, TailwindCSS
+about: |
+    I am currently studying Computer Science at the National University of Singapore.
+    I have experience in web development, and I am currenty learning whatever I can from my teachers and peers.
+    Hit me up if you want to chat about computing!
+info:
+    github: https://github.com/chuakid
+    linkedin: https://www.linkedin.com/in/kelvin-chua-b18187154/
+    email: chuakid@gmail.com
 projects:
     - title: VideoSync
       tags: 
@@ -26,67 +27,80 @@ projects:
         - MongoDB
         - Express
       description: Password protected file transfer with expiring files
+      source: https://github.com/chuakid/PersonalFileTransfer-Vue
+    - title: Personal Website
+      tags:
+        - Eleventy
+        - Tailwind
+        - Nunjucks
+        - FeatherIcons
+      description: This website.
+      source: https://github.com/chuakid/personalsite
+
+
 ---
 
-<main class="md:flex min-h-screen text-white bg-gray-900">
-    <section id="information" class="md:max-w-xl bg-gray-800 p-4">
+<main class="md:flex min-h-screen text-white bg-gray-800 md:py-16 md:px-32">
+    <section id="information" class="md:max-w-md p-8 md:mr-20">
         <header class="mb-3">
-            <h1 class="text-6xl text-blue-300">Kelvin Chua</h1>
-            <h3 class="text-sm text-gray-400">Undergraduate Student of Computer Science</h3>
+            <h1 class="text-7xl text-blue-300">Kelvin Chua</h1>
+            <h3 class="text-lg text-gray-200">Undergraduate Student of Computer Science</h3>
         </header>
-        <section class="text-center">
-            <div class="rounded-xl mb-2 p-2 shadow-lg text-gray-300 bg-gray-700">
-                <h2 class="text-blue-400 text-xl text-center">
-                &ltcontact&gt
-            </h2>
-                <div>
-                    <a class="hover:text-blue-300 underline" href="/static/resume_without_number.pdf">Resume</a>
-                    <div>Email: chuakid@gmail.com</div>
-                    <div class="hover:text-blue-300 underline">
-                        <a href="https://github.com/chuakid/">Github: chuakid</a>
-                    </div>
-                    <div class="hover:text-blue-300 underline">
-                        <a href="https://www.linkedin.com/in/kelvin-chua-b18187154/">LinkedIn: kelvin-chua-b18187154</a>
-                    </div>
-                </div>
-            </div>
-
-            {% for info in information %}
-                <div class="rounded-xl mb-2 p-2 shadow-lg text-gray-300 bg-gray-700">
-                    <h2 class="text-blue-400 text-xl text-center">
-                &lt{{info.title}}&gt
-            </h2>
-                    {{info.text}}
-                </div>
-            {% endfor %}
+        <section class="md:mt-8 text-gray-300">
+            {{about}}
         </section>
-    </section>
-    <section class="p-2 flex-wrap md:flex items-start content-start overflow-y flex-grow">
-        {% for project in projects %}
-            <div class="rounded p-5 mb-2 md:ml-2 bg-gray-800 flex-grow">
-                <h3 class="text-blue-300 text-2xl mb-5 ">
-                    {{project.title}}
-                </h3>
-                <p class="mb-5">{{project.description}}</p>
-                <div class="mb-5">
-                    {% for tag in project.tags %}
-                        <span class="inline-block rounded px-2 py-1 mt-1 border-red-700 border">{{tag}}</span>
-                    {% endfor %}
-                </div>
-                <div class="mt-5">
-                    {% if project.link %}
-                        <a class="inline-block transition-transform transform rounded hover:scale-110 hover:bg-indigo-300 bg-blue-600 mr-2 px-2 py-1" href={{project.link}}>
-                    Demo
-                    </a>
-                    {% endif %}
-                    {% if project.source %}
-                        <a class="inline-block transition-transform transform rounded hover:scale-110 hover:bg-indigo-300 bg-blue-600 mr-2 px-2 py-1" href={{project.source}}>
-                    Source
-                </a>
-                    {% endif %}
-                </div>
+        <footer class="mt-5 flex">
+            <a class="mr-2 hover:scale-125 transform transition" href={{info.github}}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                github
+            </a>
 
-            </div>
+            <a class="mr-2 hover:scale-125 transform transition" href="/static/resume_without_number.pdf">
+                <svg class="" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+                    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                    <polyline points="13 2 13 9 20 9"></polyline>
+                </svg>
+                resume
+            </a>
+
+            <a class="mr-2 hover:scale-125 transform transition" href={{info.linkedin}}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                linkedin
+            </a>
+
+        </footer>
+        <hr class="mt-2">
+       <div class="mt-2">Email: {{info.email}}</div>
+
+    </section>
+    <section id="projects" class="p-8 overflow-y self-start flex-grow">
+        {% for project in projects %}
+            <a href={{project.source}}>
+                <article class="rounded transition transform md:hover:scale-110 p-5 mb-2 md:ml-2 bg-gray-700 flex-grow">
+                    <h3 class="text-white text-3xl mb-5 ">
+                        {{project.title}}
+                    </h3>
+                    <p class="mb-5 text-gray-400">{{project.description}}</p>
+                    <div class="mb-5">
+                        {% for tag in project.tags %}
+                            <span class="inline-block rounded px-2 py-1 mt-1 border-red-700 border">{{tag}}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="mt-5">
+                        {% if project.link %}
+                            <a class="inline-block transition-transform transform rounded hover:scale-110 hover:bg-indigo-500 bg-blue-600 mr-2 px-2 py-1" href={{project.link}}>
+                             Demo
+                            </a>
+                        {% endif %}
+                    </div>
+                </article>
+            </a>
         {% endfor %}
     </section>
 </main>

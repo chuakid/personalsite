@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#projects:hover article {
+    opacity: 40%;
+}
+
+#projects:hover article:hover {
+    opacity: 100%;
+}
