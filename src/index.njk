@@ -9,35 +9,6 @@ info:
     github: https://github.com/chuakid
     linkedin: https://www.linkedin.com/in/kelvin-chua-b18187154/
     email: chuakid@gmail.com
-projects:
-    - title: VideoSync
-      tags: 
-        - Vue
-        - Tailwind
-        - NodeJS
-        - WebSockets
-      description: Synchronizes Youtube playback across multiple web clients 
-      link: https://videosync.serendibooty.top
-      source: https://github.com/chuakid/video-sync-vite
-    - title: PersonalFileTransfer
-      tags:
-        - Vue
-        - Tailwind
-        - NodeJS
-        - MongoDB
-        - Express
-      description: Password protected file transfer with expiring files
-      source: https://github.com/chuakid/PersonalFileTransfer-Vue
-    - title: Personal Website
-      tags:
-        - Eleventy
-        - Tailwind
-        - Nunjucks
-        - FeatherIcons
-      description: This website.
-      source: https://github.com/chuakid/personalsite
-
-
 ---
 
 <main class="md:flex min-h-screen text-white bg-gray-800 md:py-16 md:px-32">
@@ -79,28 +50,5 @@ projects:
        <div class="mt-2">Email: {{info.email}}</div>
 
     </section>
-    <section id="projects" class="p-8 overflow-y self-start flex-grow">
-        {% for project in projects %}
-            <a href={{project.source}}>
-                <article class="rounded transition transform md:hover:scale-110 p-5 mb-2 md:ml-2 bg-gray-700 flex-grow">
-                    <h3 class="text-white text-3xl mb-5 ">
-                        {{project.title}}
-                    </h3>
-                    <p class="mb-5 text-gray-400">{{project.description}}</p>
-                    <div class="mb-5">
-                        {% for tag in project.tags %}
-                            <span class="inline-block rounded px-2 py-1 mt-1 border-red-700 border">{{tag}}</span>
-                        {% endfor %}
-                    </div>
-                    <div class="mt-5">
-                        {% if project.link %}
-                            <a class="inline-block transition-transform transform rounded hover:scale-110 hover:bg-indigo-500 bg-blue-600 mr-2 px-2 py-1" href={{project.link}}>
-                             Demo
-                            </a>
-                        {% endif %}
-                    </div>
-                </article>
-            </a>
-        {% endfor %}
-    </section>
+    {% include "projects.njk" %}
 </main>
