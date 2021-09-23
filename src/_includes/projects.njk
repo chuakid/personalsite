@@ -1,11 +1,11 @@
 <section id="projects" class="p-8 overflow-y self-start flex-grow">
     {% for project in projects %}
-        <a href={{project.source}}>
+        <a title={{project.title}} href={{project.source}}>
             <article class="rounded transition transform md:hover:scale-110 p-5 mb-2 md:ml-2 bg-gray-700 flex-grow">
-                <h3 class="text-white text-3xl mb-5 ">
+                <h2 class="text-white text-3xl mb-5 ">
                     {{project.title}}
-                </h3>
-                <p class="mb-5 text-gray-400">{{project.description}}</p>
+                </h2>
+                <p class="mb-5 text-gray-300">{{project.description}}</p>
                 <div class="mb-5">
                     {% for tag in project.tags %}
                         <span class="inline-block rounded px-2 py-1 mt-1 border-red-700 border">{{tag}}</span>
@@ -13,7 +13,7 @@
                 </div>
                 <div class="mt-5">
                     {% if project.link %}
-                        <a class="inline-block transition-transform transform rounded hover:scale-110 hover:bg-indigo-500 bg-blue-600 mr-2 px-2 py-1" href={{project.link}}>
+                        <a title="{{project.title + ' demo'}}" class="inline-block transition-transform transform rounded hover:scale-110 hover:bg-indigo-500 bg-blue-600 mr-2 px-2 py-1" href={{project.link}}>
                              Demo
                             </a>
                     {% endif %}
