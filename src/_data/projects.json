@@ -44,5 +44,14 @@
         ],
         "description": "Searches a specific subreddit for a keyword every hour and sends it to a configured discord channel.",
         "source": "https://github.com/chuakid/Discord-Reddit-Keyword-Bot"
+    },
+    {
+        "title": "Sorting Algorithm Visualizer",
+        "tags": [
+            "Vue"
+        ],
+        "description": "Visualizer for sorting algorithms",
+        "source": "https://github.com/chuakid/sort-visualizer",
+        "link": "https://sortvis.serendibooty.top/"
     }
 ]
