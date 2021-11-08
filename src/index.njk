@@ -18,7 +18,7 @@ skills:
     - NodeJS
 ---
 
-<main class="md:flex md:items-start min-h-screen text-white bg-gray-800 md:py-16 lg:px-20">
+<main class="md:flex md:items-start min-h-screen text-white md:w-4/5 mx-auto mt-10">
     <section id="information" class="md:max-w-md p-8 md:mr-20 md:sticky md:top-0">
         <header class="mb-3">
             <h1 class="text-7xl text-blue-300">Kelvin Chua</h1>
@@ -26,13 +26,6 @@ skills:
         </header>
         <section class="md:mt-8 text-gray-300">
             {{about}}
-            <p class="mt-2">
-            <span class="">Skills</span>:
-            {% for skill in skills %}
-                    {{skill}}
-                {% endfor %}
-            </p>
-
         </section>
         <footer class="mt-5 flex">
             <a title="github" class="mr-2 hover:scale-125 transform transition" href={{info.github}}>
@@ -52,7 +45,15 @@ skills:
 
         </footer>
         <hr class="mt-2">
-        <div class="mt-2">Email: {{info.email}}</div>
+        <div class="mt-2 text-gray-400">
+        Email: {{info.email}}
+            <p>
+                <span class="">Skills</span>:
+            {% for skill in skills %}
+                    {{skill}}
+                {% endfor %}
+            </p>
+        </div>
 
     </section>
     {% include "projects.njk" %}
