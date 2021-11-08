@@ -3,12 +3,19 @@ layout: main.njk
 title: Kelvin Chua
 about: |
     I am currently studying Computer Science at the National University of Singapore.
-    I have experience in web development, and I am currenty learning whatever I can from my teachers and peers.
-    Hit me up if you want to chat about computing!
+    I have experience in web development, and am currently learning react and all its friends(redux etc.)
 info:
     github: https://github.com/chuakid
     linkedin: https://www.linkedin.com/in/kelvin-chua-b18187154/
     email: chuakid@gmail.com
+skills: 
+    - HTML
+    - CSS
+    - JavaScript
+    - TailwindCSS
+    - React
+    - Vue
+    - NodeJS
 ---
 
 <main class="md:flex md:items-start min-h-screen text-white bg-gray-800 md:py-16 lg:px-20">
@@ -19,6 +26,13 @@ info:
         </header>
         <section class="md:mt-8 text-gray-300">
             {{about}}
+            <p class="mt-2">
+            <span class="">Skills</span>:
+            {% for skill in skills %}
+                    {{skill}}
+                {% endfor %}
+            </p>
+
         </section>
         <footer class="mt-5 flex">
             <a title="github" class="mr-2 hover:scale-125 transform transition" href={{info.github}}>
