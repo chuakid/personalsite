@@ -9,7 +9,7 @@
         ],
         "description": "Synchronizes Youtube playback across multiple web clients",
         "link": "https://videosync.serendibooty.top",
-        "source": "https://github.com/chuakid/video-sync-vite"
+        "source": "https://github.com/chuakid/VideoSync"
     },
     {
         "title": "PersonalFileTransfer",
