@@ -1,7 +1,7 @@
 module.exports = function (config) {
     // Output directory: _site
     // Copy static folder
-    // config.addPassthroughCopy("src/static");
+    config.addPassthroughCopy("src/static");
 
     //For printing SVGs
     const fs = require("fs");
