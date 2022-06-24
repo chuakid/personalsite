@@ -5,13 +5,13 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^10.3.4",
-    "cssnano": "^5.0.8",
-    "postcss": "^8.3.6",
+    "@11ty/eleventy": "^1.0.1",
+    "autoprefixer": "^10.4.7",
+    "cssnano": "^5.1.12",
+    "postcss": "^8.4.14",
     "postcss-cli": "^8.3.1",
     "save-dev": "0.0.1-security",
-    "tailwindcss": "^2.2.15",
-    "@11ty/eleventy": "^0.12.1"
+    "tailwindcss": "^3.1.4"
   },
   "scripts": {
     "tailwind:process": "npx tailwindcss -i src/style.css -o _site/assets/css/style.css",
