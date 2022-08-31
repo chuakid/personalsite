@@ -8,7 +8,6 @@
             "WebSockets"
         ],
         "description": "Synchronizes Youtube playback across multiple web clients",
-        "link": "https://videosync.serendibooty.top",
         "source": "https://github.com/chuakid/VideoSync"
     },
     {
@@ -52,6 +51,6 @@
         ],
         "description": "Visualizer for sorting algorithms",
         "source": "https://github.com/chuakid/sort-visualizer",
-        "link": "https://sortvis.serendibooty.top/"
+        "link": "https://sortvis.kelvinchua.dev/"
     }
 ]
