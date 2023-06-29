@@ -10,4 +10,5 @@ module.exports = {
     }
   },
   plugins: [],
+  watch: ['_site/**/*.css'],
 }

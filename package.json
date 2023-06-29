@@ -17,7 +17,7 @@
     "dev:tailwind": "npx tailwindcss -i src/style.css -o _site/assets/css/style.css -w --postcss", 
     "predev": "rm -rf _site",
     "prebuild": "rm -rf _site",
-    "dev": "concurrently 'npm run dev:tailwind' 'eleventy --serve --quiet'",
+    "dev": "concurrently 'npm run dev:tailwind' 'eleventy --serve'",
     "build": "NODE_ENV=production npm run build:tailwind && eleventy"
   },
   "author": "",
