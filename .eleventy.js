@@ -1,3 +1,5 @@
+const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
+
 module.exports = function (config) {
     // Output directory: _site
     // Copy static folder
@@ -14,6 +16,8 @@ module.exports = function (config) {
 
         return fileContents;
     });
+    // If you have other `addPlugin` calls, it’s important that UpgradeHelper is added last.
+    config.addPlugin(UpgradeHelper);
 
     return {
         dir: {
