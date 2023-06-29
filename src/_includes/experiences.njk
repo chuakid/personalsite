@@ -6,7 +6,10 @@
                 <h2 class="text-white text-3xl">
                     {{experience.company}}
                 </h2>
-                <div class="mb-3">{{experience.jobTitle}}</div>
+                <div class="flex justify-between mb-3">{{experience.jobTitle}}
+                    <div class="text-gray-400">{{experience.date}}</div>
+                </div>
+
                 <p class="mb-5 text-gray-300">{{experience.description}}</p>
                 <div class="mb-5">
                     {% for tag in experience.tags %}
