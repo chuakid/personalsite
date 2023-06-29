@@ -1,7 +1,8 @@
-<section id="projects" class="p-8 self-start flex-grow">
+<section id="projects" class="section">
+    <h2 class="text-5xl mb-4 text-blue-200">Projects</h2>
     {% for project in projects %}
         <a title={{project.title}} href={{project.source}}>
-            <article class="rounded transition transform md:hover:scale-110 p-5 mb-2 md:ml-2 bg-gray-700 flex-grow">
+            <article class="rounded transition transform md:hover:scale-110 p-5 mb-2 bg-gray-700 flex-grow">
                 <h2 class="text-white text-3xl mb-5 ">
                     {{project.title}}
                 </h2>

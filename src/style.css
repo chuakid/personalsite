@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-#projects:hover article {
+.section:hover article {
     opacity: 40%;
 }
 
-#projects:hover article:hover {
+.section:hover article:hover {
     opacity: 100%;
 }
