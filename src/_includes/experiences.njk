@@ -1,8 +1,11 @@
-<section id="experiences" class="section">
+{% import 'macros.njk' as macros%}
+
+<section id="experiences">
     <h2 class="text-5xl mb-4 text-blue-200">Experience</h2>
-    {% for experience in experiences %}
-        <a title={{experience.jobTitle}} href={{experience.link}}>
-            <article class="rounded transition transform md:hover:scale-110 p-5 mb-2 bg-gray-700 flex-grow">
+    <div class="section">
+        {% for experience in experiences %}
+            <a title={{experience.jobTitle}} href={{experience.link}}>
+                {{macros.articlestart()}}
                 <h2 class="text-white text-3xl">
                     {{experience.company}}
                 </h2>
@@ -13,10 +16,11 @@
                 <p class="mb-5 text-gray-300">{{experience.description}}</p>
                 <div class="mb-5">
                     {% for tag in experience.tags %}
-                        <span class="inline-block rounded px-2 py-1 mt-1 border-red-700 border">{{tag}}</span>
+                        {{macros.tagspan(tag)}}
                     {% endfor %}
                 </div>
-            </article>
-        </a>
-    {% endfor %}
+                {{macros.articleend()}}
+            </a>
+        {% endfor %}
+    </div>
 </section>

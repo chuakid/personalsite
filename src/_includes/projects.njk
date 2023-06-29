@@ -1,25 +1,29 @@
-<section id="projects" class="section">
+{% import 'macros.njk' as macros%}
+
+<section id="projects">
     <h2 class="text-5xl mb-4 text-blue-200">Projects</h2>
-    {% for project in projects %}
-        <a title={{project.title}} href={{project.source}}>
-            <article class="rounded transition transform md:hover:scale-110 p-5 mb-2 bg-gray-700 flex-grow">
+    <div class="section">
+        {% for project in projects %}
+            <a title={{project.title}} href={{project.source}}>
+                {{macros.articlestart()}}
                 <h2 class="text-white text-3xl mb-5 ">
                     {{project.title}}
                 </h2>
                 <p class="mb-5 text-gray-300">{{project.description}}</p>
                 <div class="mb-5">
                     {% for tag in project.tags %}
-                        <span class="inline-block rounded px-2 py-1 mt-1 border-red-700 border">{{tag}}</span>
+                        {{macros.tagspan(tag)}}
                     {% endfor %}
                 </div>
                 <div class="mt-5">
                     {% if project.link %}
-                        <a title="{{project.title + ' demo'}}" class="inline-block transition-transform transform rounded hover:scale-110 hover:bg-indigo-500 bg-blue-600 mr-2 px-2 py-1" href={{project.link}}>
+                        <a title="{{project.title + ' demo'}}" class="transition rounded hover:bg-blue-500 bg-blue-800 mr-2 px-2 py-1" href={{project.link}}>
                              Demo
                             </a>
                     {% endif %}
                 </div>
-            </article>
-        </a>
-    {% endfor %}
+                {{macros.articleend()}}
+            </a>
+        {% endfor %}
+    </div>
 </section>

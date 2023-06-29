@@ -1,0 +1,11 @@
+{% macro articlestart() %}
+    <article class="rounded transition md:hover:scale-110 p-5 mb-2 hover:bg-slate-800 border border-slate-700 flex-grow">
+{% endmacro %}
+
+{% macro articleend() %}
+    </article>
+{% endmacro %}
+
+{% macro tagspan(name) %}
+    <span class="inline-block rounded px-2 py-1 mt-1 bg-sky-800 text-sky-200">{{name}}</span>
+{% endmacro %}

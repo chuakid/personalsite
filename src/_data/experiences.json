@@ -2,7 +2,7 @@
     {
         "jobTitle": "Software Engineer",
         "company": "WaveScan",
-        "description": "Developed a client-facing responsive web application in React for management of projects, including a visualizer for 3D scanning. Also lead a massive refactor of the application that reduced codebase size by 40%.",
+        "description": "Developed a client-facing responsive web application in React for management of projects, workspaces and viewing of PDF files. Also lead a massive refactor of the application that reduced codebase size by 40%.",
         "date": "May 2023 - Present",
         "link": "http://app.wavescan.xyz",
         "tags": [
