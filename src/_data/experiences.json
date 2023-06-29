@@ -14,7 +14,7 @@
         "company": "GovTech",
         "description": "Built a responsive end-to-end services that aggregated food donations from over 10 food support organizations using React, ChakraUI, Redux, NodeJS, DynamoDB and AWS Lambda, displayed in a responsive site with filtration and sorting capabilities",
         "date": "May 2022 - July 2022",
-        "link": "http://app.wavescan.xyz",
+        "link": "https://www.tech.gov.sg/",
         "tags": [
             "React",
             "ChakraUI",
