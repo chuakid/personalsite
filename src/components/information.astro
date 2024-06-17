@@ -23,7 +23,7 @@ import linkedinSvg from "../images/linkedin.svg"
       class="mr-2 hover:scale-125 transform transition"
       href={config.info.github}
     >
-    <Image src={githubSvg} alt="github icon" />
+    <Image loading={"eager"} src={githubSvg} alt="github icon" />
       github
     </a>
 
@@ -32,7 +32,7 @@ import linkedinSvg from "../images/linkedin.svg"
       class="mr-2 hover:scale-125 transform transition"
       href="/static/resume.pdf"
     >
-    <Image src={fileSvg} alt="file icon" />
+    <Image loading={"eager"} src={fileSvg} alt="file icon" />
 
       resume
     </a>
@@ -42,7 +42,7 @@ import linkedinSvg from "../images/linkedin.svg"
       class="mr-2 hover:scale-125 transform transition"
       href={config.info.linkedin}
     >
-    <Image src={linkedinSvg} alt="linkedin icon" />
+    <Image loading={"eager"} src={linkedinSvg} alt="linkedin icon" />
       linkedin
     </a>
   </footer>
