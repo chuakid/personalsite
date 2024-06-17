@@ -1,5 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import { config } from "../config";
+
+import fileSvg from "../images/file.svg"
+import githubSvg from "../images/github.svg"
+import linkedinSvg from "../images/linkedin.svg"
 ---
 
 <section id="information" class="md:max-w-md md:mr-20 md:sticky md:top-0">
@@ -18,6 +23,7 @@ import { config } from "../config";
       class="mr-2 hover:scale-125 transform transition"
       href={config.info.github}
     >
+    <Image src={githubSvg} alt="github icon" />
       github
     </a>
 
@@ -26,6 +32,8 @@ import { config } from "../config";
       class="mr-2 hover:scale-125 transform transition"
       href="/static/resume.pdf"
     >
+    <Image src={fileSvg} alt="file icon" />
+
       resume
     </a>
 
@@ -34,6 +42,7 @@ import { config } from "../config";
       class="mr-2 hover:scale-125 transform transition"
       href={config.info.linkedin}
     >
+    <Image src={linkedinSvg} alt="linkedin icon" />
       linkedin
     </a>
   </footer>
@@ -57,7 +66,7 @@ import { config } from "../config";
         >
       </p>
       <p>
-        Created using Eleventy and TailwindCSS with zero client-side JavaScript
+        Statically generated using Astro and TailwindCSS with zero client-side JavaScript
         for a lean experience.
       </p>
     </div>

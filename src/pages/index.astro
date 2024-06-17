@@ -4,19 +4,20 @@ import Layout from "../layouts/Layout.astro";
 import Project from "../components/project.astro";
 import Information from "../components/information.astro";
 import Experience from "../components/experience.astro";
+import { config } from "../config";
 
 const projects = await getCollection("projects");
 const experiences = await getCollection("experiences");
 ---
 
-<Layout title="Kelvin Chua">
+<Layout title={config.name}>
   <main
-    class="p-8 sm:m-12 md:flex md:items-start min-h-screen text-white mx-auto mt-10"
+    class="p-8 md:flex md:items-start lg:w-3/5 min-h-screen text-white mx-auto mt-10"
   >
     <Information />
 
     <section class="flex-grow">
-      <section id="experiences">
+      <section id="experiences" class="mb-8">
         <h2 class="text-5xl mb-4 text-blue-200">Experience</h2>
         {
           experiences.map((experience) => (

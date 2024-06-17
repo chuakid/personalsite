@@ -1,8 +1,6 @@
 title: Personal Website
 tags:
-- Eleventy
+- Astro
 - Tailwind
-- Nunjucks
-- FeatherIcons
 description: This website.
 source: https://github.com/chuakid/personalsite
