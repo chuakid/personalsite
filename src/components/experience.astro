@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Card from "./card.astro";
+
+interface Props {
+  experience: CollectionEntry<"experiences">;
+}
+
+const {
+  experience: {
+    data: { company, date, description, jobTitle, tags, link },
+  },
+} = Astro.props;
+---
+
+<div class="section">
+  <a title={jobTitle} href={link}>
+    <Card>
+      <h2 class="text-white text-3xl">
+        {company}
+      </h2>
+      <div class="flex justify-between mb-3">
+        {jobTitle}
+        <div class="text-gray-400">{date}</div>
+      </div>
+      <p class="mb-5 text-gray-300">{description}</p>
+      <div class="mb-5 flex gap-1 place-items-start flex-wrap">
+        {
+          tags.map((tag) => (
+            <span class="inline-block rounded px-2 py-1 mt-1 bg-sky-800 text-sky-200">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </Card>
+  </a>
+</div>

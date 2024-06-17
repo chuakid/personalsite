@@ -1,0 +1,8 @@
+title: Discord-Reddit-Keyword Search Bot
+tags:
+- Node
+- TypeScript
+- Discord.js
+- Snoowrap
+description: Searches a specific subreddit for a keyword every hour and sends it to a configured discord channel.
+source: https://github.com/chuakid/Discord-Reddit-Keyword-Bot

@@ -1,0 +1,8 @@
+title: VideoSync
+tags:
+- Vue
+- Tailwind
+- NodeJS
+- WebSockets
+description: Synchronizes Youtube playback across multiple web clients
+source: https://github.com/chuakid/VideoSync

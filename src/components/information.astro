@@ -1,0 +1,65 @@
+---
+import { config } from "../config";
+---
+
+<section id="information" class="md:max-w-md md:mr-20 md:sticky md:top-0">
+  <header class="mb-3">
+    <h1 class="text-7xl text-blue-300">Kelvin Chua</h1>
+    <h2 class="text-lg text-gray-200">
+      Undergraduate Student of Computer Science
+    </h2>
+  </header>
+  <section class="md:mt-8 text-gray-300">
+    {config.info.about}
+  </section>
+  <footer class="mt-5 flex">
+    <a
+      title="github"
+      class="mr-2 hover:scale-125 transform transition"
+      href={config.info.github}
+    >
+      github
+    </a>
+
+    <a
+      title="resume"
+      class="mr-2 hover:scale-125 transform transition"
+      href="/static/resume.pdf"
+    >
+      resume
+    </a>
+
+    <a
+      title="linkedin"
+      class="mr-2 hover:scale-125 transform transition"
+      href={config.info.linkedin}
+    >
+      linkedin
+    </a>
+  </footer>
+  <hr class="mt-2" />
+  <div class="mt-2 text-gray-400">
+    Email: {config.info.email}
+    <p>
+      Skills:
+      {config.skills.join(" ")}
+    </p>
+    <div class="mt-5">
+      <p>
+        Design inspired by <a
+          class="transition text-gray-200 hover:text-cyan-200"
+          href="https://www.sarahdayan.dev/"
+          title="Sarah Dayan's Site">Sarah Dayan's Site</a
+        >
+        and the <a
+          class="transition text-gray-200 hover:text-cyan-200"
+          href="https://tailwindcss.com/">TailwindCSS site</a
+        >
+      </p>
+      <p>
+        Created using Eleventy and TailwindCSS with zero client-side JavaScript
+        for a lean experience.
+      </p>
+    </div>
+  </div>
+</section>
