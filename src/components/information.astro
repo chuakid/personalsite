@@ -2,11 +2,11 @@
 import { Image } from "astro:assets";
 import { config } from "../config";
 
-import githubSvg from "../images/github.svg"
-import linkedinSvg from "../images/linkedin.svg"
+import githubSvg from "../images/github.svg";
+import linkedinSvg from "../images/linkedin.svg";
 ---
 
-<section id="information" class="md:max-w-md md:mr-20 md:sticky md:top-0">
+<section id="information" class="md:pr-20 md:sticky md:top-0 md:max-w-md">
   <header class="mb-3">
     <h1 class="text-7xl text-blue-300">Kelvin Chua</h1>
     <h2 class="text-lg text-gray-200">
@@ -22,7 +22,7 @@ import linkedinSvg from "../images/linkedin.svg"
       class="mr-2 hover:scale-125 transform transition"
       href={config.info.github}
     >
-    <Image loading={"eager"} src={githubSvg} alt="github icon" />
+      <Image loading={"eager"} src={githubSvg} alt="github icon" />
       github
     </a>
 
@@ -41,7 +41,7 @@ import linkedinSvg from "../images/linkedin.svg"
       class="mr-2 hover:scale-125 transform transition"
       href={config.info.linkedin}
     >
-    <Image loading={"eager"} src={linkedinSvg} alt="linkedin icon" />
+      <Image loading={"eager"} src={linkedinSvg} alt="linkedin icon" />
       linkedin
     </a>
   </footer>
@@ -61,8 +61,8 @@ import linkedinSvg from "../images/linkedin.svg"
         >
       </p>
       <p>
-        Statically generated using Astro and TailwindCSS with zero client-side JavaScript
-        for a lean experience.
+        Statically generated using Astro and TailwindCSS with zero client-side
+        JavaScript for a lean experience.
       </p>
     </div>
   </div>

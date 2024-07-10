@@ -5,9 +5,11 @@ import Project from "../components/project.astro";
 import Information from "../components/information.astro";
 import Experience from "../components/experience.astro";
 import { config } from "../config";
+import PostListing from "../components/post_listing.astro";
 
 const projects = await getCollection("projects");
 const experiences = await getCollection("experiences");
+const posts = await getCollection("posts");
 ---
 
 <Layout title={config.name}>
@@ -17,7 +19,12 @@ const experiences = await getCollection("experiences");
     <Information />
 
     <section class="flex-grow">
-      <section id="experiences" class="mb-8">
+      <div class="pt-2">
+        <h2 class="text-5xl mb-4 text-blue-200">Posts</h2>
+        {posts.map((post) => <PostListing post={post} />)}
+      </div>
+
+      <section id="experiences" class="mb-8 flex-1">
         <h2 class="text-5xl mb-4 text-blue-200">Experience</h2>
         {
           experiences.map((experience) => (
@@ -25,7 +32,7 @@ const experiences = await getCollection("experiences");
           ))
         }
       </section>
-	  
+
       <section id="projects">
         <h2 class="text-5xl mb-4 text-blue-200">Projects</h2>
         <div class="section">
