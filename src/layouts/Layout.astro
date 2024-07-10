@@ -1,7 +1,11 @@
 ---
+import List from "../components/list.astro";
+
 interface Props {
   title: string;
 }
+
+export const components = { list: List };
 
 const { title } = Astro.props;
 ---
