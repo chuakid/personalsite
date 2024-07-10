@@ -14,18 +14,18 @@ const posts = await getCollection("posts");
 
 <Layout title={config.name}>
   <main
-    class="p-8 md:flex md:items-start lg:w-3/5 min-h-screen text-white mx-auto mt-10"
+    class="p-8 md:flex md:items-start xl:w-4/5 lg:w-5/6 min-h-screen text-white mx-auto mt-10"
   >
     <Information />
 
     <section class="flex-grow">
-      <div class="pt-2">
-        <h2 class="text-5xl mb-4 text-blue-200">Posts</h2>
+      <section id="posts" class="pb-8">
+        <h2 class="text-4xl mb-3 text-blue-200">Posts</h2>
         {posts.map((post) => <PostListing post={post} />)}
-      </div>
+      </section>
 
-      <section id="experiences" class="mb-8 flex-1">
-        <h2 class="text-5xl mb-4 text-blue-200">Experience</h2>
+      <section id="experiences" class="pb-8 flex-1">
+        <h2 class="text-4xl mb-3 text-blue-200">Work</h2>
         {
           experiences.map((experience) => (
             <Experience experience={experience} />
@@ -34,8 +34,8 @@ const posts = await getCollection("posts");
       </section>
 
       <section id="projects">
-        <h2 class="text-5xl mb-4 text-blue-200">Projects</h2>
-        <div class="section">
+        <h2 class="text-4xl mb-3 text-blue-200">Projects</h2>
+        <div class="flex flex-col gap-1">
           {projects.map((project) => <Project project={project} />)}
         </div>
       </section>

@@ -1,6 +1,8 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import Card from "./card.astro";
+import { Image } from "astro:assets";
+import externalLinkSvg from "../images/external-link.svg";
 
 interface Props {
   experience: CollectionEntry<"experiences">;
@@ -16,15 +18,18 @@ const {
 <div class="section">
   <a title={jobTitle} href={link}>
     <Card>
-      <h2 class="text-white text-3xl">
-        {company}
-      </h2>
-      <div class="flex justify-between mb-3">
+      <header class="flex gap-2">
+        <h2 class="text-white text-xl">
+          {company}
+        </h2>
+        <Image src={externalLinkSvg} alt="external link" />
+      </header>
+      <div class="flex justify-between mb-2">
         {jobTitle}
         <div class="text-gray-400">{date}</div>
       </div>
       <p class="mb-5 text-gray-300">{description}</p>
-      <div class="mb-5 flex gap-1 place-items-start flex-wrap">
+      <div class="flex gap-1 place-items-start flex-wrap">
         {
           tags.map((tag) => (
             <span class="inline-block rounded px-2 py-1 mt-1 bg-sky-800 text-sky-200">

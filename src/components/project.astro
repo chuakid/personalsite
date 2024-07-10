@@ -1,6 +1,8 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import Card from "./card.astro";
+import { Image } from "astro:assets";
+import externalLinkSvg from "../images/external-link.svg";
 
 interface Props {
   project: CollectionEntry<"projects">;
@@ -15,9 +17,14 @@ const {
 
 <a title={title} href={source} aria-label={title}>
   <Card>
-    <h2 class="text-white text-3xl mb-5">{title}</h2>
-    <p class="mb-5 text-gray-300">{description}</p>
-    <div class="mb-5 flex gap-1">
+    <header class="flex gap-2">
+      <h2 class="text-white text-xl">
+        {title}
+      </h2>
+      <Image src={externalLinkSvg} alt="external link" />
+    </header>
+    <p class="text-gray-300">{description}</p>
+    <div class="mt-1 flex gap-1">
       {
         tags.map((tag) => (
           <>
@@ -26,19 +33,6 @@ const {
             </span>{" "}
           </>
         ))
-      }
-    </div>
-    <div class="mt-5">
-      {
-        link && (
-          <a
-            title={`${title} demo`}
-            class="transition rounded hover:bg-blue-500 bg-blue-800 mr-2 px-2 py-1"
-            href={link}
-          >
-            Demo
-          </a>
-        )
       }
     </div>
   </Card></a
