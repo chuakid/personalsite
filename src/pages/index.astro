@@ -21,7 +21,15 @@ const posts = await getCollection("posts");
     <section class="flex-grow">
       <section id="posts" class="pb-8">
         <h2 class="text-4xl mb-3 text-blue-200">Posts</h2>
-        {posts.map((post) => <PostListing post={post} />)}
+        <div class="flex flex-col gap-2">
+          {
+            posts
+              .sort(
+                (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+              )
+              .map((post) => <PostListing post={post} />)
+          }
+        </div>
       </section>
 
       <section id="experiences" class="pb-8 flex-1">
@@ -35,7 +43,7 @@ const posts = await getCollection("posts");
 
       <section id="projects">
         <h2 class="text-4xl mb-3 text-blue-200">Projects</h2>
-        <div class="flex flex-col gap-1">
+        <div class="flex flex-col gap-2">
           {projects.map((project) => <Project project={project} />)}
         </div>
       </section>
