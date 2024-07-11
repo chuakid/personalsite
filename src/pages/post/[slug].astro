@@ -26,10 +26,16 @@ const { Content } = await post.render();
       >
         Back
       </a>
-      <span>Published: {post.data.pubDate.toLocaleDateString()}</span>
     </header>
     <main class="mt-5">
-      <header><h1 class="text-4xl">{post.data.title}</h1></header>
+      <header class="pb-4">
+        <h1 class="text-7xl font-serif font-black">
+          {post.data.title}
+        </h1>
+        <span class="text-sm text-gray-300"
+          >{post.data.pubDate.toLocaleDateString()}</span
+        >
+      </header>
       <Content components={{ ul: List }} />
     </main>
   </div>
