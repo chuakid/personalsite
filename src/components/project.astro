@@ -3,6 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import Card from "./card.astro";
 import { Image } from "astro:assets";
 import externalLinkSvg from "../images/external-link.svg";
+import Tag from "./tag.astro";
 
 interface Props {
   project: CollectionEntry<"projects">;
@@ -10,7 +11,7 @@ interface Props {
 
 const {
   project: {
-    data: { description, tags, title, link, source },
+    data: { description, tags, title, source },
   },
 } = Astro.props;
 ---
@@ -25,15 +26,7 @@ const {
     </header>
     <p class="text-gray-300">{description}</p>
     <div class="mt-1 flex gap-1">
-      {
-        tags.map((tag) => (
-          <>
-            <span class="inline-block rounded px-2 py-1 mt-1 bg-sky-800 text-sky-200">
-              {tag}
-            </span>{" "}
-          </>
-        ))
-      }
+      {tags.map((tag) => <Tag>{tag}</Tag>)}
     </div>
   </Card></a
 >
