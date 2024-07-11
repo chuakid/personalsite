@@ -34,8 +34,8 @@ const { Content } = await post.render();
         <h1 class="text-7xl font-serif font-black">
           {post.data.title}
         </h1>
-        <span class="text-sm text-gray-300"
-          >{post.data.pubDate.toLocaleDateString()}</span
+        <time class="text-sm text-gray-300"
+          >{post.data.pubDate.toDateString()}</time
         >
       </header>
       <Content components={{ ul: List, h2: H2, a: Anchor }} />
