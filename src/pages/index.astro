@@ -21,7 +21,7 @@ const posts = await getCollection("posts");
     <section class="flex-grow">
       <section id="posts" class="pb-8">
         <h2 class="text-4xl mb-3 text-blue-200">Posts</h2>
-        <div class="grid gap-2 md:grid-cols-2 xl:grid-cols-3">
+        <div class="grid gap-2 md:grid-cols-2">
           {
             posts
               .sort(
