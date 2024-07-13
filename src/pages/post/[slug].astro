@@ -1,7 +1,9 @@
 ---
-import H2 from "../../components/markdown/h2.astro";
-import List from "../../components/markdown/list.astro";
+import h2 from "../../components/markdown/h2.astro";
+import ul from "../../components/markdown/list.astro";
+import p from "../../components/markdown/p.astro";
 import Anchor from "../../components/markdown/anchor.astro";
+import ol from "../../components/markdown/ol.astro";
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
@@ -38,7 +40,7 @@ const { Content } = await post.render();
           >{post.data.pubDate.toDateString()}</time
         >
       </header>
-      <Content components={{ ul: List, h2: H2, a: Anchor }} />
+      <Content components={{ ul, h2, a: Anchor, ol, p }} />
     </main>
   </div>
 </Layout>
