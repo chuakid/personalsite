@@ -1,9 +1,12 @@
 ---
+import { SEO } from "astro-seo";
+
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -11,23 +14,25 @@ const { title } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Kelvin Chua's portfolio page" />
-    <title>{import.meta.env.DEV ? `DEV: ${title}` : title}</title>
+    <SEO
+      description={description}
+      title={import.meta.env.DEV ? `DEV: ${title}` : title}
+    />
   </head>
   <body class="bg-slate-900 text-white">
     <slot />
+    <style is:global>
+      code {
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
+      }
+    </style>
   </body>
 </html>
-<style is:global>
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-</style>
