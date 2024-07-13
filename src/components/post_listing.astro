@@ -18,8 +18,8 @@ const { post } = Astro.props;
         >{post.data.pubDate.toDateString()}</span
       >
     </header>
-    <p class="line-clamp-4">
-      {post.body}
+    <p>
+      {post.data.description}
     </p>
     <footer class="pt-4 flex gap-1 flex-wrap">
       {post.data.tags.map((tag) => <Tag>{tag}</Tag>)}
