@@ -1,0 +1,6 @@
+title: Conway's Game Of Life
+tags:
+- TypeScript
+- React
+description: Conway's game of life implemented in react.
+source: https://github.com/chuakid/conways-game-of-life
