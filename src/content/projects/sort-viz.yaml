@@ -1,6 +1,6 @@
 title: Sorting Algorithm Visualizer
 tags:
-- Vue
+- React
 description: Visualizer for sorting algorithms
 source: https://github.com/chuakid/sort-visualiser-react
 link: https://sort-visualiser-react.vercel.app/
