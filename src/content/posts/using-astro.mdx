@@ -11,7 +11,7 @@ a simpler topic: Why and How I build this site.
 ## Why
 
 For me, more than a job, writing code and creating software are hobbies. This site serves as a place
-where I can talk about software, site reliability and computers. All the things I love, really.
+where I can talk about software, site reliability and computers. All the things I love.
 
 ## How
 
@@ -23,7 +23,7 @@ Astro is
 2. Easy to use
 3. Familiar to me because it has syntax similar to React (jsx)
 
-Astro supports the [Island](https://docs.astro.build/en/concepts/islands/) concept, which allows for the separation of components on the page that act independently, similar to React. How this differs is it operates on a level above the framework, allowing you to even mix and match different frameworks. Astro then only delivers static html for the uninteractive portions, and allows for "parallel hydration" for the interaction portions (allowing you to load different parts of the page at different times).
+Astro supports the [Island](https://docs.astro.build/en/concepts/islands/) concept, which allows for the separation of components on the page that act independently, similar to React. How this differs is it operates on a level above the framework, allowing you to even mix and match different frameworks. Astro then only delivers static html for the uninteractive portions, and allows for "parallel hydration" for the interactive portions (allowing you to load different parts of the page at different times).
 
 Most components written will be in `.astro` format. For instance, each "post" on the home page (one of which you probably clicked to get here) looks like this
 
@@ -66,6 +66,6 @@ Content can be written in markdown, mdx or use an external cms or even .html fil
 
 On top of Astro, [Tailwind](https://tailwindcss.com/) is used for the styling. I designed and styled all the components and pages myself. Astro has really good support for tailwind with [@astrojs/tailwind](https://docs.astro.build/en/guides/integrations-guide/tailwind/).
 
-And that's it, really. I try to reduce the amount of Javascript I send to the frontend. In future, as the number of posts grow, I may add searching and tagging for the posts but this website is meant to be as lightweight as possible.
+I try to reduce the amount of Javascript I send to the frontend. In future, as the number of posts grow, I may add searching and tagging for the posts but this website is meant to be as lightweight as possible.
 
 The source is available on [Github](https://github.com/chuakid/personalsite).
