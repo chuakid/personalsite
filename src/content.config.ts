@@ -1,8 +1,10 @@
 // 1. Import utilities from `astro:content`
 import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
+
 // 2. Define your collection(s)
 const experiences = defineCollection({
-    type: 'data',
+    loader: glob({ pattern: '**/[^_]*.yaml', base: "./src/content/experiences" }),
     schema: z.object({
         jobTitle: z.string(),
         company: z.string(),
@@ -13,7 +15,7 @@ const experiences = defineCollection({
     })
 });
 const projects = defineCollection({
-    type: 'data',
+    loader: glob({ pattern: '**/[^_]*.yaml', base: "./src/content/projects" }),
     schema: z.object({
         title: z.string(),
         tags: z.array(z.string()),
@@ -24,7 +26,7 @@ const projects = defineCollection({
 });
 
 const posts = defineCollection({
-    type: 'content',
+    loader: glob({ pattern: '**/[^_]*.mdx', base: "./src/content/posts" }),
     schema: z.object({
         title: z.string(),
         tags: z.array(z.string()),

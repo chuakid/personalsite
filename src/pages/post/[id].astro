@@ -5,18 +5,18 @@ import p from "../../components/markdown/p.astro";
 import Anchor from "../../components/markdown/anchor.astro";
 import ol from "../../components/markdown/ol.astro";
 import Layout from "../../layouts/Layout.astro";
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 
 export const getStaticPaths = async () => {
   const posts = await getCollection("posts");
   return posts.map((post) => ({
-    params: { slug: post.slug },
+    params: { id: post.id },
     props: { post },
   }));
 };
 
 const { post } = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 ---
 
 <Layout title={post.data.title} description={post.data.description}>
