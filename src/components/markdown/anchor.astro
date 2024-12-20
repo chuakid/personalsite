@@ -1,5 +1,7 @@
 ---
-const { href } = Astro.props;
+const { href, title } = Astro.props;
 ---
 
-<a href={href} class="underline text-blue-300 hover:text-blue-400"><slot /></a>
+<a href={href} title={title} class="text-blue hover:text-sky transition-colors"
+    ><slot /></a
+>

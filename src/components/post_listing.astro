@@ -13,8 +13,8 @@ const { post } = Astro.props;
 <a href={`/post/${post.id}`}>
   <Card>
     <header class="flex justify-between pb-1 flex-wrap">
-      <h2 class="text-2xl font-semibold">{post.data.title}</h2>
-      <span class="text-gray-400 align-middle"
+      <h2 class="text-2xl">{post.data.title}</h2>
+      <span class="text-subtext0 align-middle"
         >{post.data.pubDate.toDateString()}</span
       >
     </header>

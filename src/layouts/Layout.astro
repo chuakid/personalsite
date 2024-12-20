@@ -19,7 +19,7 @@ const { title, description } = Astro.props;
       title={import.meta.env.DEV ? `DEV: ${title}` : title}
     />
   </head>
-  <body class="bg-slate-900 text-white">
+  <body class="macchiato bg-crust text-text min-h-screen">
     <slot />
     <style is:global>
       code {

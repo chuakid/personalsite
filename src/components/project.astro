@@ -19,12 +19,12 @@ const {
 <a title={title} href={source} aria-label={title}>
   <Card>
     <header class="flex gap-2">
-      <h2 class="text-white text-xl">
+      <h2 class="text-xl">
         {title}
       </h2>
       <Image src={externalLinkSvg} alt="external link" />
     </header>
-    <p class="text-gray-300">{description}</p>
+    <p class="text-subtext0">{description}</p>
     <div class="mt-1 flex gap-1 flex-wrap">
       {tags.map((tag) => <Tag>{tag}</Tag>)}
     </div>

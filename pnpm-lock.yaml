@@ -32,6 +32,10 @@ importers:
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
+    devDependencies:
+      '@catppuccin/tailwindcss':
+        specifier: ^0.1.6
+        version: 0.1.6(tailwindcss@3.4.16)
 
 packages:
 
@@ -111,6 +115,11 @@ packages:
   '@babel/types@7.26.3':
     resolution: {integrity: sha512-vN5p+1kl59GVKMvTHt55NzzmYVxprfJD+ql7U9NFIfKCBkYE55LYtS+WtPlaYOyzydrKI8Nezd+aZextrd+FMA==}
     engines: {node: '>=6.9.0'}
+
+  '@catppuccin/tailwindcss@0.1.6':
+    resolution: {integrity: sha512-V+Y0AwZ5SSyvOVAcDl7Ng30xy+m82OKnEJ+9+kcZZ7lRyXuZrAb2GScdq9XR3v+ggt8qiZ/G4TvaC9cJ88AAXA==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0'
 
   '@emmetio/abbreviation@2.3.3':
     resolution: {integrity: sha512-mgv58UrU3rh4YgbE/TzgLQwJ3pFsHHhCLqY20aJq+9comytTXUDNGG/SMtSeMJdkpxgXSXunBGLD8Boka3JyVA==}
@@ -2691,6 +2700,10 @@ snapshots:
     dependencies:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
+
+  '@catppuccin/tailwindcss@0.1.6(tailwindcss@3.4.16)':
+    dependencies:
+      tailwindcss: 3.4.16
 
   '@emmetio/abbreviation@2.3.3':
     dependencies:

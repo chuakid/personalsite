@@ -19,16 +19,16 @@ const {
   <a title={jobTitle} href={link}>
     <Card>
       <header class="flex gap-2">
-        <h2 class="text-white text-xl">
+        <h2 class="text-xl">
           {company}
         </h2>
         <Image src={externalLinkSvg} alt="external link" />
       </header>
-      <div class="flex justify-between mb-2">
+      <div class="flex justify-between mb-2 text-subtext1">
         {jobTitle}
-        <div class="text-gray-400">{date}</div>
+        <div class="text-overlay1">{date}</div>
       </div>
-      <p class="text-gray-300">{description}</p>
+      <p>{description}</p>
     </Card>
   </a>
 </div>
